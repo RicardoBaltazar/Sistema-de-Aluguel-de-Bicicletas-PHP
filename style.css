@@ -1,0 +1,19 @@
+.body {
+    background-color: #363636;
+}
+.row{
+    background-color: #dcdcdc;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 40px 50px 50px 50px;
+    box-shadow: black 1px 1px;
+    
+
+}
+h2{
+    color: white;
+    font-weight: bold;
+}
+.form-group{
+    padding: 10px;
+}

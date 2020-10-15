@@ -42,10 +42,10 @@
                 <div >
                     Deseja se cadastrar como: 
                     <br>
-                    <input type="radio" name="client" id="client">
+                    <input type="radio" name="client" id="client" class="input-radio">
                     <label for="client">Cliente</label>
                     <br>
-                    <input type="radio" name="client" id="provider">
+                    <input type="radio" name="client" id="provider" class="input-radio">
                     <label for="provider">Fornecedor</label>
                     <br>
                 </div>

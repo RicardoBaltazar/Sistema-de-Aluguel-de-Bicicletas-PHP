@@ -29,13 +29,19 @@
 
     <main>
         <section>
-            <div>
-                <h1>Sitema de Aluguel de bicicletas e Scooters</h1>
-                <p>Você pode escolher vários modelos de bicicletas e scooters e alugar por um mês inteiro. <br>
-                Você também pode disponibilizar a sua bicicleta a/ou scooter para que alguem alugue.
-                </p>
+            <div class="sidebar">
+                <a href="#about">Painel de Controle</a>
+                <a href="#services">Adicionar Produto</a>
             </div>
-            <img src="./assets/undraw_biking_kc4f.svg" alt="">
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3>Nome do produto</h3>
+                    <img src="" alt="Foto do produto">
+                    <p>valor do produto</p>
+                    <p>Situação do produto até dia x</p>
+                </div>
+            </div>
         </section>
     </main>
 </body>

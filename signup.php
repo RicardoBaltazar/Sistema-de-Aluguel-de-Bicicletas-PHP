@@ -16,10 +16,10 @@
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="home.php">Bike Rental App</a>
+                    <a class="navbar-brand" href="index.php">Bike Rental App</a>
                 </div>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="home.php"><span ></span> Home </a></li>
+                    <li><a href="index.php"><span ></span> Home </a></li>
                 </ul>
             </div>
         </nav>
@@ -38,6 +38,17 @@
 
                 <label for="password">Senha</label>
                 <input type="password" name="password" id="" placeholder="Cria uma senha" required>
+
+                <div >
+                    Deseja se cadastrar como: 
+                    <br>
+                    <input type="radio" name="client" id="client">
+                    <label for="client">Cliente</label>
+                    <br>
+                    <input type="radio" name="client" id="provider">
+                    <label for="provider">Fornecedor</label>
+                    <br>
+                </div>
 
                 <input type="submit" value="Cadastrar" class="input-submit">
             </form>

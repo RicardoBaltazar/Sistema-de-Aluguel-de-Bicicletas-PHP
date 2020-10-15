@@ -38,7 +38,7 @@ main section div p {
     width: 200px;
     font-weight: bold;
     font-size: 18px;
-    margin-top: 10px;
+    margin-top: 30px;
     color: #fff;
     text-decoration: none;
     outline: none;
@@ -59,7 +59,7 @@ main .section-page-signup{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 25px;
 }
 
 main .section-page-signup p {
@@ -89,6 +89,32 @@ main .section-page-signup form input {
 .input-submit:hover{
     background-color: #2c2b2b;
 }
+
+/*Page Provider*/
+
+main section .sidebar {
+    height: 100%;
+    width: 175px;
+    position: fixed;
+    top: 49px;
+    left: 0;
+    background-color: #222;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    font-size: 22px;
+}
+
+main section .sidebar a {
+    color: #fff;
+    margin-bottom: 10px;
+    margin-left: 35px;
+}
+
+.panel-default {
+    width: 100%;
+}
+
 
 
 

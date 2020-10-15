@@ -1,0 +1,32 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'roboto', sans-serif;
+}
+
+main section {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+main section div {
+    max-width: 400px;
+}
+
+main section div h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+main section div p {
+    font-size: 18px;
+}
+
+main section img {
+    max-width: 600px;
+}

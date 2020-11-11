@@ -4,59 +4,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="index.css">
-    <title>Sitema Bike Rental App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Aluguel de Bicicletas</title>
 </head>
 
 <body>
-
-    <header>
-        <nav class="navbar navbar-inverse">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="index.php">Bike Rental App</a>
+    <div class="home-page">
+        <header>
+            <nav>
+                <div class="nav-wrapper">
+                    <a href="#" class="brand-logo">Aluguel de Bicicletas</a>
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li><a href="page-signup.php">Cadastrar - se</a></li>
+                    </ul>
                 </div>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="index.php"><span></span> Home </a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+            </nav>
+        </header>
 
-    <main>
-        <section class="section-page-login">
-            <p>Login</p>
-            <form action="">
-                <label for="email">Email</label>
-                <input type="email" placeholder="Digite seu email" required>
-
-                <label for="password">Senha</label>
-                <input type="password" name="password" id="" placeholder="Digite sua senha" required>
-
-                <div >
-                    Deseja se logar como: 
-                    <br>
-                    <input type="radio" name="client" id="client" class="input-radio">
-                    <label for="client">Cliente</label>
-                    <br>
-                    <input type="radio" name="client" id="provider" class="input-radio">
-                    <label for="provider">Fornecedor</label>
-                    <br>
-                    <input type="radio" name="client" id="adm" class="input-radio">
-                    <label for="adm">Administrador</label>
-                    <br>
+        <main>
+            <section>
+                <div class="container center-align">
+                    <h4>Cadastrar</h4>
+                    <form class="col s6">
+                        <div class="">
+                            <div class="input-field col s6">
+                                <input placeholder="Placeholder" id="first_name" type="text" class="validate">
+                                <label for="first_name">Nome</label>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="input-field col s6">
+                                <input id="email" type="email" class="validate">
+                                <label for="email">Email</label>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="input-field col s6">
+                                <input id="password" type="password" class="validate">
+                                <label for="password">Password</label>
+                            </div>
+                        </div>
+                        <div class="center-align col s12">
+                            <button class="btn waves-effect waves-light" type="submit" name="action">Cadastrar</button>
+                        </div>
+                    </form>
                 </div>
-
-                <input type="submit" value="Entrar" class="input-submit">
-            </form>
-        </section>
-    </main>
-
-
+            </section>
+        </main>
+    </div>
 </body>
 
 </html>

@@ -1,7 +1,6 @@
 <?php
 
-$home = file_get_contents('home.php');
-
-echo $home
+$pageLogin = file_get_contents("login.php");
+echo $pageLogin;
 
 ?>

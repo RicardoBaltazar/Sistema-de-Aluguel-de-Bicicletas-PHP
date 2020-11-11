@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    background-color: #f9f9f9;
+}
+
+nav {
+    background-color: #696969;
+    padding: 0 25px;
+}
+
+.center-align{
+    margin-top: 25px;
+}
+
+form {
+    width: 50%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: 35px;
+}
+
+.btn {
+    width: 100%;
+}
+

@@ -15,7 +15,7 @@ nav {
 }
 
 .center-align{
-    margin-top: 25px;
+    margin-top: 50px;
 }
 
 form {
@@ -29,3 +29,8 @@ form {
     width: 100%;
 }
 
+@media(max-width: 425px){
+    form {
+        width: 100%;
+    }
+}

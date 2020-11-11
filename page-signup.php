@@ -17,7 +17,7 @@
                 <div class="nav-wrapper">
                     <a href="#" class="brand-logo">Aluguel de Bicicletas</a>
                     <ul id="nav-mobile" class="right hide-on-med-and-down">
-                        <li><a href="page-signup.php">Cadastrar - se</a></li>
+                        <li><a href="page-login.php">Login</a></li>
                     </ul>
                 </div>
             </nav>
@@ -46,6 +46,11 @@
                                 <label for="password">Password</label>
                             </div>
                         </div>
+                        <select class="browser-default">
+                            <option value="" disabled selected>Se Cadastrar como:</option>
+                            <option value="1">Cliente</option>
+                            <option value="2">Fornecedor</option>
+                        </select>
                         <div class="center-align col s12">
                             <button class="btn waves-effect waves-light" type="submit" name="action">Cadastrar</button>
                         </div>

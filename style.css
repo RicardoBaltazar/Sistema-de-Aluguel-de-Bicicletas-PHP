@@ -25,6 +25,11 @@ form {
     margin-top: 35px;
 }
 
+.erro-signup {
+    margin-top: 10px;
+    color: red;
+}
+
 .btn {
     width: 100%;
 }

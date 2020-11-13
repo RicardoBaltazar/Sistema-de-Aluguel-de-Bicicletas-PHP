@@ -20,7 +20,7 @@ Class DatabaseConnect {
     public function insert($name, $email, $password, $nivel){
         try{
         $insert = $this->pdo->prepare('INSERT INTO users(name, email, password, nivel) 
-        VALUES(:name, :email, :password, :niveç)');
+        VALUES(:name, :email, :password, :nivel)');
         $insert->bindParam(":name", $name);
         $insert->bindParam(":email", $email);
         $insert->bindParam(":password", $password);

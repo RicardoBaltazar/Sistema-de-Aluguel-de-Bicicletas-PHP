@@ -33,6 +33,14 @@ Class DatabaseConnect {
             echo 'Erro generico '.$error ->getMessage();
         }
     }
+
+    public function select(){
+        $select = array();
+        $select = $this->pdo->prepare('SELECT * FROM user');
+        $select->execute();
+        $result = $select->fetchAll(PDO::FETCH_ASSOC);
+        return $result;
+    }
 }
 
 ?>

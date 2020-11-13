@@ -1,6 +1,6 @@
 <?php
 
-require_once './class/Class_db_connect.php';
+require_once './model/Class_db_connect.php';
 
 
 if(isset($_POST['action'])){
@@ -10,8 +10,8 @@ if(isset($_POST['action'])){
         $password = MD5($_POST['password']);
         $nivel = $_POST['nivel'];
 
-        $signupConnect = new DatabaseConnect();
-        $signupInsert = $signupConnect->insert($name, $email, $password, $nivel);
+        //$signupConnect = new DatabaseConnect();
+        //$signupInsert = $signupConnect->insert($name, $email, $password, $nivel);
         
         echo $nivel;
         echo $password;

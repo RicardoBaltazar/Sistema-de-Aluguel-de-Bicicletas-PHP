@@ -1,21 +1,7 @@
 <?php
+require_once 'Config.php';
 
-Class DatabaseConnect {
-
-    private $pdo;
-
-    public function __construct()
-    {
-        try {
-            $this->pdo = new PDO('mysql:host=localhost;dbname=bicycle_rental_system;charset=utf8', 'root', '');
-        } catch (PDOException $error) {
-            echo "Erro com banco de dados: ".$error->getMessage();
-            exit();
-        } catch (Exception $error){
-            echo "Erro Genérico: ".$error->getMessage();
-            exit();
-        }
-    }
+Class UsersConnect extends DatabaseConnect {
 
     public function insert($name, $email, $password, $nivel){
         try{
@@ -26,7 +12,7 @@ Class DatabaseConnect {
         $insert->bindParam(":password", $password);
         $insert->bindParam(":nivel", $nivel);
         $insert->execute();
-        header('location:index.php');
+        header('location:../index.php?message=Dados Cadastrados com Sucesso');
         } catch (PDOException $error) {
             echo 'Erro com banco de dados '.$error ->getMessage();
         } catch(Exception $error) {

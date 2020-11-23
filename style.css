@@ -37,6 +37,15 @@ form {
 }
 
 @media(max-width: 425px){
+    .home-page header nav .brand-logo{
+        font-size: 14px;
+        left: 25%;
+    }
+
+    .right{
+        display: block !important;
+    }
+
     form {
         width: 100%;
     }

@@ -3,7 +3,8 @@ require_once 'Config.php';
 
 Class UsersConnect extends DatabaseConnect {
 
-    public function insert($name, $email, $password, $nivel){
+    //public function insert($name, $email, $password, $nivel){
+    public function insertDatabase($name, $email, $password, $nivel){
         try{
         $insert = $this->pdo->prepare('INSERT INTO users(name, email, password, nivel) 
         VALUES(:name, :email, :password, :nivel)');

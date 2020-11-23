@@ -1,8 +1,8 @@
 <?php
 
-require_once 'Class_db_connect.php';
+require_once 'Class_Inserir.php';
 
-Class SetGet_Insert extends UsersConnect{
+Class SetGet_Insert extends InsertConnect{
     private $name;
     private $email;
     private $password;
@@ -45,4 +45,6 @@ Class SetGet_Insert extends UsersConnect{
     public function getInsert(){
         return $this->insertDatabase($this->getName(),$this->getEmail(),$this->getPassword(),$this->getNivel());
     }
+
+    
 }

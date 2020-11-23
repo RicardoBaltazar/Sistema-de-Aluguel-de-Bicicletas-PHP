@@ -1,5 +1,5 @@
 <?php
-/*
+
 spl_autoload_register(function($file_name)
 {
 
@@ -16,7 +16,7 @@ spl_autoload_register(function($file_name)
         require 'model'.$file_name.'.php';
     }
 });
-*/
+
 ?>
 
 

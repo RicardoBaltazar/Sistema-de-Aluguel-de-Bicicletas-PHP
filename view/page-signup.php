@@ -27,7 +27,7 @@
             <section>
                 <div class="container center-align">
                     <h4>Cadastrar</h4>
-                    <form action='./controller/signup-connect.php' method='post' class="col s6">
+                    <form action='../Controller/validatorForm.php' method='post' class="col s6">
                         <div class="">
                             <div class="input-field col s6">
                                 <input placeholder="Placeholder" name="name" id="first_name" type="text" class="validate" required>
@@ -59,7 +59,7 @@
                     <p class='erro-signup'>
                         <?php
                         if(isset($_GET['message'])){
-                            echo $_GET['message'];
+                            echo $_GET['message']."<a href='page-login.php'> Faça o Login!</a>";
                         }
                         ?>
                     </p>

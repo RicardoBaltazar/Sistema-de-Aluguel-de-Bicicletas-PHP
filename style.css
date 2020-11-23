@@ -28,7 +28,8 @@ form {
 
 .erro-signup {
     margin-top: 10px;
-    color: red;
+    color: #000;
+    font-weight: bold;
 }
 
 .btn {

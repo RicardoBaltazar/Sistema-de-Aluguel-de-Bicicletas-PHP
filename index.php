@@ -1,7 +1,10 @@
 <?php
 require_once 'Core/Core.php';
 require_once 'Controller/HomeController.php';
+require_once 'Controller/LoginController.php';
 require_once 'Controller/ErroController.php';
+require_once 'Controller/validatorForm.php';
+
 
 $template = file_get_contents("./Template/template.php");
 

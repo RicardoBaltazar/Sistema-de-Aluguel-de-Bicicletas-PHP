@@ -11,6 +11,7 @@ Class Core
         }
         
         $action = 'index';
+        $parameter = array();
 
         //verificar se existe página ou classe controller
         if(!class_exists($controller)){
@@ -18,7 +19,7 @@ Class Core
         }
 
         //chamando a classe e o methodo do Controller
-        call_user_func_array(array(new $controller, $action), array());
+        call_user_func_array(array(new $controller, $action), $parameter);
 
     }
 

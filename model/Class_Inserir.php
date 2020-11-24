@@ -11,13 +11,22 @@ Class InsertConnect extends DatabaseConnect {
         $insert->bindParam(":email", $email);
         $insert->bindParam(":password", $password);
         $insert->bindParam(":nivel", $nivel);
-        $insert->execute();
+        $executeInsert = $insert->execute();
+
+        if($executeInsert){
+            header('location:?page=home&parameter=Dados Cadastrados com sucesso! ');
+        }
+        
         //header('location:../index.php?message=Dados Cadastrados com Sucesso');
-        header('location:../View/page-signup.php?message=Dados Cadastrados com Sucesso. ');
+        //header('location:../View/page-signup.php?message=Dados Cadastrados com Sucesso. ');
         } catch (PDOException $error) {
             echo 'Erro com banco de dados '.$error ->getMessage();
+            exit();
         } catch(Exception $error) {
             echo 'Erro generico '.$error ->getMessage();
+            exit();
         }
     }
 }
+
+

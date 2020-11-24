@@ -1,6 +1,7 @@
 <?php
 require_once 'Core/Core.php';
 require_once 'Controller/HomeController.php';
+require_once 'Controller/ErroController.php';
 
 $pageHome = file_get_contents("./Template/template.php");
 

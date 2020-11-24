@@ -3,10 +3,18 @@ require_once 'Core/Core.php';
 require_once 'Controller/HomeController.php';
 require_once 'Controller/ErroController.php';
 
-$pageHome = file_get_contents("./Template/template.php");
+$template = file_get_contents("./Template/template.php");
 
-$core = new Core;
-$core->start($_GET);
+//armazenar o retorno da url e controller dentro de uma variavel
+ob_start();
+    $core = new Core;
+    $core->start($_GET);
+    
+    $exit = ob_get_contents();
+ob_end_clean();
 
-echo $pageHome;
+//subistituindo o valor dinâmico do template pela variavel com a página da url
+$page =  str_replace('{{template}}', $exit, $template);
+
+echo $page;
 

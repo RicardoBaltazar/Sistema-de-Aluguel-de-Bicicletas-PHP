@@ -3,7 +3,13 @@
 Class Core
 {
     public function start($urlGet){
-        $controller = ucfirst($urlGet['page'].'Controller');
+        //caso não exista o parametro page na url
+        if(!isset($urlGet['page'])){
+            $controller = 'HomeController';
+        } else {
+            $controller = ucfirst($urlGet['page'].'Controller');
+        }
+        
         $action = 'index';
 
         //verificar se existe página ou classe controller

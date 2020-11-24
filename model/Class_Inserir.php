@@ -21,5 +21,3 @@ Class InsertConnect extends DatabaseConnect {
         }
     }
 }
-
-?>

@@ -10,11 +10,11 @@ ob_start();
     $core = new Core;
     $core->start($_GET);
     
-    $exit = ob_get_contents();
+    $LayoutController = ob_get_contents();
 ob_end_clean();
 
 //subistituindo o valor dinâmico do template pela variavel com a página da url
-$page =  str_replace('{{template}}', $exit, $template);
+$page =  str_replace('{{template}}', $LayoutController, $template);
 
 echo $page;
 

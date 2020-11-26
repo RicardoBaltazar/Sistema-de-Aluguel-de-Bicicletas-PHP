@@ -17,8 +17,6 @@ Class InsertConnect extends DatabaseConnect {
             header('location:?page=home&parameter=Dados Cadastrados com sucesso! ');
         }
         
-        //header('location:../index.php?message=Dados Cadastrados com Sucesso');
-        //header('location:../View/page-signup.php?message=Dados Cadastrados com Sucesso. ');
         } catch (PDOException $error) {
             echo 'Erro com banco de dados '.$error ->getMessage();
             exit();

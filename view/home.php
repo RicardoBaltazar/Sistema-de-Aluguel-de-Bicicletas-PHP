@@ -14,7 +14,7 @@
         <section>
             <div class="container center-align">
                 <h4>Cadastrar</h4>
-                <form action='?page=ValidatorForm' method='post' class="col s6">
+                <form action='?page=ValidateForm' method='post' class="col s6">
                     <div class="">
                         <div class="input-field col s6">
                             <input placeholder="Placeholder" name="name" id="first_name" type="text" class="validate" required>

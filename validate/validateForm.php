@@ -1,8 +1,9 @@
 <?php
 
-require_once 'SignupController.php';
+//require_once 'Controller/SignupController.php';
+require_once 'Controller/UserController.php';
 
-Class ValidatorFormController{
+Class ValidateFormController{
 
     public function index(){
         if(isset($_POST['action'])){
@@ -15,8 +16,11 @@ Class ValidatorFormController{
                 $name = strtolower($name);
                 $email = strtolower($email);
         
-                $signupControllerValidation = new SignupController();
-                $signupControllerValidation->insert($name, $email, $password, $nivel);
+                $signup = new Users;
+                $signup->signup($name, $email, $password, $nivel);
+
+                //$signupControllerValidation = new SignupController();
+                //$signupControllerValidation->insert($name, $email, $password, $nivel);
         
             } else {
                 //header('location:./View/page-signup.php?message=Não foi possivel se cadastrar. Por favor, tente novamente.');

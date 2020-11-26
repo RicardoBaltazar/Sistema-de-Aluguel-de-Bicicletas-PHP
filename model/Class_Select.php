@@ -2,6 +2,7 @@
 
 require_once 'Config.php';
 
+/*
 Class SelectConnect extends DatabaseConnect {
     public function select(){
         $result = array();

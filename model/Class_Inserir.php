@@ -1,11 +1,14 @@
 <?php
 require_once 'Config.php';
 
-Class InsertConnect extends DatabaseConnect {
+
+//Class InsertConnect extends DatabaseConnect {
+Class InsertConnect {
     
     public function insertDatabase($name, $email, $password, $nivel){
         try{
-        $insert = $this->pdo->prepare('INSERT INTO users(name, email, password, nivel) 
+        
+        $insert = DatabaseConnect::connect()->prepare('INSERT INTO users(name, email, password, nivel) 
         VALUES(:name, :email, :password, :nivel)');
         $insert->bindParam(":name", $name);
         $insert->bindParam(":email", $email);

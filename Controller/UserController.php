@@ -1,32 +1,19 @@
 <?php
 
 require_once 'Model/Class_Inserir.php';
+//require_once 'Model/Config.php';
 
 Class Users{
 
-    private $name;
-    private $email;
-    private $password;
-    private $nivel;
     private $insertSignup;
 
-    public function signup($name, $email, $password, $nivel){
-
-        var_dump($name, $email, $password, $nivel);
-
-        
+    public function signupUser($name, $email, $password, $nivel){
         $this->insertSignup = new InsertConnect;
-
-        try{
-        //$this->$insertSignup->insertDatabase($this->getName(),$this->getEmail(),$this->getPassword(),$this->getNivel());
-        $this->insertSignup->insertDatabase($name, $email, $password, $nivel);
-        }catch(Exception $error){
-            echo $error->getMessage();
-        }
-        
+        //$this->insertSignup = new DatabaseConnect;
+        $result = $this->insertSignup->insertDatabase($name, $email, $password, $nivel);
     }
 
-    //set
+    //s
     public function setName($value){
         $this->name = $value;
     }

@@ -1,5 +1,5 @@
 <?php
-
+/*
 require_once './Model/Class_SetGet_Insert.php';
 
 Class SignupController{
@@ -27,7 +27,7 @@ Class SignupController{
             //header('location:../View/page-signup.php?message=Não foi possivel se cadastrar. Por favor, tente novamente.');
             header('location:?page=home?message=Não foi possivel se cadastrar. Por favor, tente novamente.');
         }
-        */
+        
     }
 }
 

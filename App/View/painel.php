@@ -1,21 +1,18 @@
-<?php
+<div class="home-page">
+    <header>
+        <nav >
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo">Aluguel de Bicicletas</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="?page=login">Sair</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Page</h1>
-    <br>
-
-    <?php
-         
-    ?>
-</body>
-</html>
+    <main>
+        <section>
+            <h1>page</h1>
+        </section>
+    </main>
+</div>

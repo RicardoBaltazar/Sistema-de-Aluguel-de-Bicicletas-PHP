@@ -25,5 +25,10 @@ class Users
         //talvez fazer a session aqui
     }
 
+    public function LogoutUser(){
+        $this->logoutUser = new Session;
+        $this->LogoutUser->sessionDestroy();
+        header('location:?page=login');
+    }
 
 }

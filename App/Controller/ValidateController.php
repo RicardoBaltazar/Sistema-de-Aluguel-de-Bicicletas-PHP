@@ -56,4 +56,8 @@ Class ValidateController{
         }
     }
     
+    public function logout(){
+        $logout = new Users;
+        $logout->LogoutUser();
+    }
 }

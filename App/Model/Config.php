@@ -1,5 +1,7 @@
 <?php
 
+
+
 Class DatabaseConnect {
 
     private static $pdo;
@@ -19,9 +21,7 @@ Class DatabaseConnect {
         }
         return self::$pdo;
     }
-
-
-
+    
 }
 
     /*

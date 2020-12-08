@@ -1,3 +1,5 @@
+
+
 <div class="home-page">
     <header>
         <nav>
@@ -46,9 +48,10 @@
                 <br>
                 <p class='erro-signup'>
                     <?php
-                    if (isset($_GET['message'])) {
-                        echo $_GET['message'] . "<a href='page-login.php'> Faça o Login!</a>";
+                    if (isset($_GET['parameter'])) {
+                        echo $_GET['parameter'];
                     }
+                    
                     ?>
                 </p>
             </div>

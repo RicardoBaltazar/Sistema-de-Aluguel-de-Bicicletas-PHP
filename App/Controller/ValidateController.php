@@ -1,6 +1,7 @@
 <?php
 
-require_once 'Controller/UserController.php';
+
+require_once 'App/Controller/UserController.php';
 
 Class ValidateController{
 
@@ -43,7 +44,9 @@ Class ValidateController{
                 $name = strtolower($name);
                 $email = strtolower($email);
         
-                echo "login";
+                $signup = new Users;
+                $signup->LoginUser($name, $email, $password, $nivel);
+                
         
             } else {
                 header('location:./View/page-login.php?message=Não foi possivel realizar login. Por favor, tente novamente.');

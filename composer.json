@@ -1,0 +1,17 @@
+{
+    "name": "acer/sistema-de-aluguel-de-bicicletas-php",
+    "description": "Sistema de Aluguel de Bicicletas",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "RicardoBaltazar",
+            "email": "ricardo.baltazar04@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "App\\": "App/"
+        }
+    }
+}

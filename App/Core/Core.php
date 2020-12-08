@@ -1,5 +1,6 @@
 <?php
 
+
 Class Core
 {
     public function start($urlGet){

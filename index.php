@@ -1,12 +1,16 @@
 <?php
-require_once 'Core/Core.php';
-require_once 'Controller/HomeController.php';
-require_once 'Controller/LoginController.php';
-require_once 'Controller/ErroController.php';
-require_once 'Controller/ValidateController.php';
+//require_once ("vendor/autoload.php");
+//use App\Core\Core;
+
+require_once 'App/Core/Core.php';
+require_once 'App/Controller/HomeController.php';
+require_once 'App/Controller/PainelController.php';
+require_once 'App/Controller/LoginController.php';
+require_once 'App/Controller/ErroController.php';
+require_once 'App/Controller/ValidateController.php';
 
 
-$template = file_get_contents("./Template/template.php");
+$template = file_get_contents("App/Template/template.php");
 
 //armazenar o retorno da url e controller dentro de uma variavel
 ob_start();

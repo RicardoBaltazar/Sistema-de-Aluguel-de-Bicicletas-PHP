@@ -2,6 +2,7 @@
 
 require_once 'App/Model/Insert.php';
 require_once "App/Model/Select.php";
+require_once 'App/Model/Session.php';
 //require_once 'Model/Config.php';
 
 class Users
@@ -9,6 +10,7 @@ class Users
 
     private $insertSignup;
     private $selectLogin;
+    private $logoutUser;
 
     public function signupUser($name, $email, $password, $nivel)
     {
@@ -27,7 +29,7 @@ class Users
 
     public function LogoutUser(){
         $this->logoutUser = new Session;
-        $this->LogoutUser->sessionDestroy();
+        $this->logoutUser->sessionDestroy();
         header('location:?page=login');
     }
 

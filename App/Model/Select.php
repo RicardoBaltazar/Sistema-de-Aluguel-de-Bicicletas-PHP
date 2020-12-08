@@ -17,16 +17,10 @@ Class SelectConnect {
         $executeSelect = $select->fetchAll(PDO::FETCH_ASSOC);
 
             if($executeSelect){
-                //header('location:?page=home&parameter=Dados Cadastrados com sucesso! ');
-                //var_dump($executeSelect);
-
-                
                 $sessionLogin = new Session;
                 $sessionLogin->sessionStart($name, $email, $password, $nivel);
                 //$sessionLogin->validateSession($name, $email, $password, $nivel);
                 header('location:?page=painel&parameter=session!');
-                
-                
             }else {
                 header('location:?page=login&parameter=Login Inválido, tente Novamente!');
             }

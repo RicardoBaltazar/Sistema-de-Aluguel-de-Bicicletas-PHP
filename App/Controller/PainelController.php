@@ -1,13 +1,5 @@
 <?php
 
-//namespace App\Controller;
-
-
-
-//require_once './Model/Class_Select.php';
-require_once './App/Model/Config.php';
-
-
 Class PainelController
 {
     public function index(){

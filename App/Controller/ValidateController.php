@@ -65,11 +65,31 @@ Class ValidateController{
         if(isset($_POST['action'])){
             if(!empty($_POST['name'])){
                 $name = $_POST['name'];
+                $fileFormat = array('pgn', 'jpeg', 'jpg');
+                $extention = pathinfo($_FILES['file']['name'], PATHINFO_EXTENSION);
+                
+                if(in_array($extention, $fileFormat)){
+                    $folder = "assets/";
+                    $fileName = $_FILES['file']['tmp_name'];
+                    $newFileName = uniqid().".$extention";
 
-                $name = strtolower($name);
+                    if(move_uploaded_file($fileName, $folder.$newFileName)){
+                    
+                    $name = strtolower($name);
 
-                $add = new Users;
-                $add->AddProduct($name);
+                    $add = new Users;
+                    $add->AddProduct($name, $newFileName);
+                        
+                    }
+                    
+                } else {
+                    header('location:./View/add.php?message=Imagem inválida. Por favor, tente novamente.');
+                }
+
+                //$name = strtolower($name);
+
+                //$add = new Users;
+                //$add->AddProduct($name);
             }else {
                 header('location:./View/add.php?message=Não foi possivel adicionar produto. Por favor, tente novamente.');
             }

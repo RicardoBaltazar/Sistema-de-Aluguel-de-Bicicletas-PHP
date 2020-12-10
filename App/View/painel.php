@@ -30,7 +30,7 @@ $name = $_SESSION['name'];
             
             <div >
                 <p>Nome</p>
-                <img src="" alt="">
+                <img src="assets/5fd27b5ec847c.jpg" alt="">
                 <p>situação</p>
                 <p>alugado por</p>
                 <button>Disponibilizar</button>

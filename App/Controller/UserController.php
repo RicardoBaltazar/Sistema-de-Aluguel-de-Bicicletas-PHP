@@ -3,6 +3,7 @@
 require_once 'App/Model/Insert.php';
 require_once "App/Model/Select.php";
 require_once 'App/Model/Session.php';
+require_once 'App/Model/AddProduct.php';
 //require_once 'Model/Config.php';
 
 class Users
@@ -11,6 +12,7 @@ class Users
     private $insertSignup;
     private $selectLogin;
     private $logoutUser;
+    private $addProduct;
 
     public function signupUser($name, $email, $password, $nivel)
     {
@@ -23,8 +25,6 @@ class Users
     {
         $this->selectLogin = new SelectConnect;
         $this->selectLogin->selectDatabase($name, $email, $password, $nivel);
-
-        //talvez fazer a session aqui
     }
 
     public function LogoutUser(){
@@ -33,8 +33,12 @@ class Users
         header('location:?page=login');
     }
 
-    public function AddProduct($name){
-        echo 'usuario adicionando '.$name;
+    public function AddProduct($name, $newFileName){
+        //echo 'usuario adicionando '.$name."<br>";
+        //echo 'imagem adicionando '.$newFileName;
+
+        $this->addProduct = new AddProductConnect;
+        $this->addProduct->AddProductDatabase($name, $newFileName);
     }
 
 }

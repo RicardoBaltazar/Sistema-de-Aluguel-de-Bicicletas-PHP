@@ -31,7 +31,7 @@ $name = $_SESSION['name'];
             <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 
             <div style="margin-left: 30%;">
-                <form action="?page=Validate&method=AddProduct" method="POST">
+                <form action="?page=Validate&method=AddProduct" method="POST" enctype="multipart/form-data">
                     <h4>Adicione um produto</h4>
                     <br>
                     <div class="">
@@ -42,7 +42,7 @@ $name = $_SESSION['name'];
                     </div>
                     <div class="">
                         <div class="input-field col s6">
-                            <input name="email" id="email" type="file" class="validate" >
+                            <input name="file" id="file" type="file" class="validate" >
 
                         </div>
                         <div class="center-align col s12">

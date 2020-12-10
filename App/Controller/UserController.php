@@ -13,6 +13,9 @@ class Users
     private $selectLogin;
     private $logoutUser;
     private $addProduct;
+    private $username;
+    private $status;
+
 
     public function signupUser($name, $email, $password, $nivel)
     {
@@ -33,12 +36,14 @@ class Users
         header('location:?page=login');
     }
 
-    public function AddProduct($name, $newFileName){
+    public function AddProduct($productName, $newFileName){
         //echo 'usuario adicionando '.$name."<br>";
         //echo 'imagem adicionando '.$newFileName;
-
+        session_start();
+        $username = $_SESSION['name'];
+        $status = 1;
         $this->addProduct = new AddProductConnect;
-        $this->addProduct->AddProductDatabase($name, $newFileName);
+        $this->addProduct->AddProductDatabase($productName, $newFileName, $username, $status);
     }
 
 }

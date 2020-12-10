@@ -4,12 +4,14 @@ require_once 'Config.php';
 
 Class AddProductConnect {
     
-    public function AddProductDatabase($name, $newFileName){
+    public function AddProductDatabase($productName, $newFileName, $username, $status){
         try{
-        $add = DatabaseConnect::connect()->prepare('INSERT INTO product(name, file) 
-        VALUES(:name, :file)');
-        $add->bindParam(":name", $name);
+        $add = DatabaseConnect::connect()->prepare('INSERT INTO product(name, file, username, status) 
+        VALUES(:name, :file, :username, :status)');
+        $add->bindParam(":name", $productName);
         $add->bindParam(":file", $newFileName);
+        $add->bindParam(":username", $username);
+        $add->bindParam(":status", $status);
 
         $executeAdd = $add->execute();
 

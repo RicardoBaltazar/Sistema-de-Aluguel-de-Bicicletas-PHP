@@ -4,8 +4,9 @@
 
 require_once 'App/Core/Core.php';
 require_once 'App/Controller/HomeController.php';
-require_once 'App/Controller/PainelController.php';
 require_once 'App/Controller/LoginController.php';
+require_once 'App/Controller/PainelController.php';
+require_once 'App/Controller/AddController.php';
 require_once 'App/Controller/ErroController.php';
 require_once 'App/Controller/ValidateController.php';
 

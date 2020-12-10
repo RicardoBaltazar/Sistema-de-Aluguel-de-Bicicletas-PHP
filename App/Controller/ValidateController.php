@@ -60,4 +60,21 @@ Class ValidateController{
         $logout = new Users;
         $logout->LogoutUser();
     }
+
+    public function AddProduct(){
+        if(isset($_POST['action'])){
+            if(!empty($_POST['name'])){
+                $name = $_POST['name'];
+
+                $name = strtolower($name);
+
+                $add = new Users;
+                $add->AddProduct($name);
+            }else {
+                header('location:./View/add.php?message=Não foi possivel adicionar produto. Por favor, tente novamente.');
+            }
+        }else {
+            header('location:./View/add.php?message=Não foi possivel adicionar produto. Por favor, tente novamente.');
+        }
+    }
 }

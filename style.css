@@ -36,6 +36,12 @@ form {
     width: 100%;
 }
 
+.sidenav-fixed{
+    margin-top: 64px;
+    padding-top: 25px;
+    
+}
+
 @media(max-width: 425px){
     .home-page header nav .brand-logo{
         font-size: 14px;

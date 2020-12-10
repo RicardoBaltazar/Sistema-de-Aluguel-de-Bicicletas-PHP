@@ -42,7 +42,6 @@
                     </select>
                     <div class="center-align col s12">
                         <button class="btn waves-effect waves-light" type="submit" name="action">Cadastrar</button>
-
                     </div>
                 </form>
                 <br>

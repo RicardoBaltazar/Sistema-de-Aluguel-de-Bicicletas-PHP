@@ -33,4 +33,8 @@ class Users
         header('location:?page=login');
     }
 
+    public function AddProduct($name){
+        echo 'usuario adicionando '.$name;
+    }
+
 }

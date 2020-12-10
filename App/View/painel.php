@@ -9,7 +9,7 @@ $name = $_SESSION['name'];
 
 <div class="home-page">
     <header>
-        <nav >
+        <nav>
             <div class="nav-wrapper">
                 <a href="#" class="brand-logo">Aluguel de Bicicletas</a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
@@ -22,7 +22,21 @@ $name = $_SESSION['name'];
 
     <main>
         <section>
-            <h1><?php echo $name?></h1>
+            <ul id="slide-out" class="sidenav sidenav-fixed">
+                <li><a href="#!" style="background-color:#696969;">Painel de Controle</a></li>
+                <li><a href="?page=add">Adicionar Produto</a></li>
+            </ul>
+            <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            
+            <div >
+                <p>Nome</p>
+                <img src="" alt="">
+                <p>situação</p>
+                <p>alugado por</p>
+                <button>Disponibilizar</button>
+            </div>
         </section>
+
+
     </main>
 </div>

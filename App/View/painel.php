@@ -1,10 +1,14 @@
 <?php
 
+require_once 'App/Controller/PainelController.php';
+//require_once 'App/Model/SelectPainel.php';
 require_once 'App/Model/Session.php';
 $session = new Session;
 $session->validateSession();
 
 $name = $_SESSION['name'];
+
+
 ?>
 
 <div class="home-page">
@@ -28,7 +32,14 @@ $name = $_SESSION['name'];
             </ul>
             <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             
-            <div >
+            <div class="center-align">
+                <p>
+            <?php
+
+            print_r($products);
+            ?>
+
+                </p>
                 <p>Nome</p>
                 <img src="assets/5fd27b5ec847c.jpg" alt="">
                 <p>situação</p>

@@ -2,6 +2,8 @@
 
 require_once 'Config.php';
 
+//require_once 'App/Model/SelectPainel.php';
+
 Class AddProductConnect {
     
     public function AddProductDatabase($productName, $newFileName, $username, $status){

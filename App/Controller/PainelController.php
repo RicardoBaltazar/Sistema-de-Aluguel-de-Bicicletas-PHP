@@ -1,20 +1,27 @@
 <?php
 
+require_once 'App/Model/SelectPainel.php';
+
+
+
 Class PainelController
 {
+
+    public $products;
+
+
+
+    
+
     public function index(){
+
+        
+        $products = new SelectPainelConnect;
+        $products->selectPainelDatabase();
         
         require_once './App/View/painel.php';
-        /*
-        try{
-            //$selectData = new DatabaseConnect;
-            //print_r($selectData->select());
-            
-
-        } catch(Exception $error){
-            echo $error->getMessage();
-        }
-        */
+        
     }
+
 }
 ?>

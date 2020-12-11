@@ -11,7 +11,7 @@ class Session {
     }
 
     public function validateSession(){
-        session_start();
+        //session_start();
         if ((!isset($_SESSION['name']) == true) and (!isset($_SESSION['email']) == true) 
         and (!isset($_SESSION['password']) == true) and (!isset($_SESSION['nivel']) == true)) {
             unset($_SESSION['name']);

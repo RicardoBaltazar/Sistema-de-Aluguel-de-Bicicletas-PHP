@@ -8,6 +8,7 @@ Class SelectPainelConnect {
 
 
     public $name;
+    public $executeSelectPainel;
 
     public function selectPainelDatabase(){
         try{
@@ -24,9 +25,27 @@ Class SelectPainelConnect {
         $executeSelectPainel = $selectPainel->fetchAll(PDO::FETCH_ASSOC);
 
             if($executeSelectPainel){
-                print_r($executeSelectPainel);
+                //print_r($executeSelectPainel);
+                foreach($executeSelectPainel as $value){
+
+                    echo "<div class='container center-align products'>";
+                    echo "<p>Nome: ".$value['name'] ."</p>";
+                    echo "<img src='./assets/".$value['file']."'></img>";
+                    //echo "<p>".$value['username'] ."</p>";
+                    if($value['status'] = 1){
+                        echo "<p style='background-color:green; margin:3px;'>status: Disponível</p>";
+                        //echo "<button class='btn waves-effect waves-light' name='rent'>Alugar</button>";
+
+                    } else {
+                        echo "<p style='background-color:yellow; margin:3px;>status: Alugado</p>";
+                        echo "<button class='btn waves-effect waves-light' name='provide'>Disponibilizar</button>";
+
+                    }
+                    //echo "<p> ".$value['status'] ."</p>";
+                    echo "</div>";
+                }
                 
-                echo $_SESSION['name'] ;
+                //echo $_SESSION['name'] ;
                 //$sessionLogin->validateSession($name, $email, $password, $nivel);
                 //header('location:?page=painel&parameter=Ola Mundo');
                 //echo 'Ok';

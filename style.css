@@ -16,7 +16,24 @@ nav {
 
 .center-align{
     margin-top: 50px;
+}
 
+.products{
+    background-color: #dbdada;
+    max-width: 350px;
+    padding: 10px;
+}
+
+.products img {
+    max-width: 150px;
+}
+
+.products p {
+    font-size: 18px;
+}
+
+.products button {
+    margin: 10px 0px;
 }
 
 form {

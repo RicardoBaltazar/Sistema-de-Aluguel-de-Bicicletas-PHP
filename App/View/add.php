@@ -25,7 +25,7 @@ $name = $_SESSION['name'];
             <!--<h1><?php echo $name ?></h1>-->
 
             <ul id="slide-out" class="sidenav sidenav-fixed">
-                <li><a href="?page=painel">Painel de Controle</a></li>
+                <li><a href="?page=painel">Meus Produtos</a></li>
                 <li><a href="#!" style="background-color:#696969;">Adicionar Produto</a></li>
             </ul>
             <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>

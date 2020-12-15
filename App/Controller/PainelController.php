@@ -7,7 +7,7 @@ require_once 'App/Model/SelectPainel.php';
 Class PainelController
 {
 
-    public $products;
+    //public $products;
 
 
 
@@ -15,9 +15,6 @@ Class PainelController
 
     public function index(){
 
-        
-        $products = new SelectPainelConnect;
-        $products->selectPainelDatabase();
         
         require_once './App/View/painel.php';
         

@@ -30,20 +30,23 @@ class Users
         $this->selectLogin->selectDatabase($name, $email, $password, $nivel);
     }
 
-    public function LogoutUser(){
+    public function LogoutUser()
+    {
         $this->logoutUser = new Session;
         $this->logoutUser->sessionDestroy();
         header('location:?page=login');
     }
 
-    public function AddProduct($productName, $newFileName){
+    public function AddProduct($productName, $newFileName, $address, $value)
+    {
         //echo 'usuario adicionando '.$name."<br>";
         //echo 'imagem adicionando '.$newFileName;
-        session_start();
+        //session_start();
         $username = $_SESSION['name'];
         $status = 1;
-        $this->addProduct = new AddProductConnect;
-        $this->addProduct->AddProductDatabase($productName, $newFileName, $username, $status);
-    }
 
+
+        $this->addProduct = new AddProductConnect;
+        $this->addProduct->AddProductDatabase($productName, $newFileName, $username, $address, $value, $status);
+    }
 }

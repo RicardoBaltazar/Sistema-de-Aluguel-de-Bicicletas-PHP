@@ -65,8 +65,11 @@ Class ValidateController{
         if(isset($_POST['action'])){
             if(!empty($_POST['name'])){
                 $productName = $_POST['name'];
+                $address = $_POST['address'];
+                $value = $_POST['value'];
                 $fileFormat = array('png', 'jpeg', 'jpg');
                 $extention = pathinfo($_FILES['file']['name'], PATHINFO_EXTENSION);
+                
                 
                 if(in_array($extention, $fileFormat)){
                     $folder = "assets/";
@@ -75,10 +78,13 @@ Class ValidateController{
 
                     if(move_uploaded_file($fileName, $folder.$newFileName)){
                     
-                    $name = strtolower($productName);
+                    strtolower($productName);
+                    strtolower($address);
+                    
+                    
 
                     $add = new Users;
-                    $add->AddProduct($productName, $newFileName);
+                    $add->AddProduct($productName, $newFileName, $address, $value);
                         
                     }
                     

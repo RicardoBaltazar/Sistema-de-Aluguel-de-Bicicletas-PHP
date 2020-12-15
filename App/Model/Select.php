@@ -23,7 +23,11 @@ class SelectConnect
                 $sessionLogin = new Session;
                 $sessionLogin->sessionStart($name, $email, $password, $nivel);
                 //$sessionLogin->validateSession($name, $email, $password, $nivel);
-                header('location:?page=painel&parameter=session!');
+                if($nivel == 1){                    
+                    header('location:?page=list&parameter=session!');
+                } else {
+                    header('location:?page=painel&parameter=session!');
+                }
             } else {
                 header('location:?page=login&parameter=Login Inválido, tente Novamente!');
             }

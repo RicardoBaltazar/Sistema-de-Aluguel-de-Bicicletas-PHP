@@ -36,8 +36,16 @@ $name = $_SESSION['name'];
                     <br>
                     <div class="">
                         <div class="input-field col s6">
-                            <input placeholder="Placeholder" name="name" id="first_name" type="text" class="validate" required>
+                            <input placeholder="Nome" name="name" id="first_name" type="text" class="validate" required>
                             <label for="first_name">Nome do produto</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input placeholder="Endereço" name="address" id="address" type="text" class="validate">
+                            <label for="address">Endereço para retirada</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input placeholder="Valor" name="value" id="value" type="number" class="validate">
+                            <label for="value">Valor por Dia alugado</label>
                         </div>
                     </div>
                     <div class="">

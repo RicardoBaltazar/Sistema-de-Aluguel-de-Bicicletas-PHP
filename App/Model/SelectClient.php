@@ -2,22 +2,22 @@
 
 require_once 'Config.php';
 require_once 'App/Model/Session.php';
-session_start();
 
-Class SelectPainelConnect {
+
+Class SelectClientConnect {
 
 
     public $name;
     public $executeSelectPainel;
 
-    public function selectPainelDatabase(){
+    public function selectClientDatabase(){
         try{
-        $this->name = $_SESSION['name'];
+        //$this->name = $_SESSION['name'];
         //$selectPainel = DatabaseConnect::connect()->prepare("SELECT * FROM product");
-        $selectPainel = DatabaseConnect::connect()->prepare("SELECT * FROM product WHERE product.username = :name");
+        $selectPainel = DatabaseConnect::connect()->prepare("SELECT * FROM product");
         //$selectPainel = DatabaseConnect::connect()->prepare("SELECT * from products WHERE products.username = 
         //:name");
-        $selectPainel->bindParam(":name", $this->name);
+        //$selectPainel->bindParam(":name", $this->name);
         //$selectPainel->bindParam(":email", $email);
         //$selectPainel->bindParam(":password", $password);
         //$selectPainel->bindParam(":nivel", $nivel); 
@@ -30,17 +30,19 @@ Class SelectPainelConnect {
 
                     echo "<div class='container center-align products'>";
                     echo "<p>Nome: ".$value['name'] ."</p>";
-                    echo "<img src='./assets/".$value['file']."'></img>";
-                    echo "<p>Endereço: ".$value['address']."</p>";
-                    echo "<p>Valor por dia: ".$value['value']."$</p>";
-                    //echo "<p>".$value['username'] ."</p>";
+                    echo "<img src='./assets/".$value['file']."'></img>";                    
+                    echo "<p>Endereço para retirada</p>";
+                    echo "<p>Contato: </p>";
+                    echo "<p>Valor por dia: </p>";
+
+                    echo "<p>Dono do produto: ".$value['username'] ."</p>";
                     if($value['status'] = 1){
                         echo "<p style='background-color:green; margin:3px;'>status: Disponível</p>";
                         echo "<button class='btn waves-effect waves-light' name='rent'>Alugar</button>";
 
                     } else {
                         echo "<p style='background-color:yellow; margin:3px;>status: Alugado</p>";
-                        echo "<button class='btn waves-effect waves-light' name='provide'>Disponibilizar</button>";
+                        //echo "<button class='btn waves-effect waves-light' name='provide'>Disponibilizar</button>";
 
                     }
                     //echo "<p> ".$value['status'] ."</p>";

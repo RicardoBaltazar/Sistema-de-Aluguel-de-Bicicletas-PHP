@@ -67,6 +67,7 @@ Class ValidateController{
                 $productName = $_POST['name'];
                 $address = $_POST['address'];
                 $value = $_POST['value'];
+                $phone = $_POST['phone'];
                 $fileFormat = array('png', 'jpeg', 'jpg');
                 $extention = pathinfo($_FILES['file']['name'], PATHINFO_EXTENSION);
                 
@@ -84,7 +85,7 @@ Class ValidateController{
                     
 
                     $add = new Users;
-                    $add->AddProduct($productName, $newFileName, $address, $value);
+                    $add->AddProduct($productName, $newFileName, $address, $phone, $value);
                         
                     }
                     
@@ -102,5 +103,17 @@ Class ValidateController{
         }else {
             header('location:./View/add.php?message=Não foi possivel adicionar produto. Por favor, tente novamente.');
         }
+    }
+
+    public function Rent(){
+        $status = 2;
+        $rent = new Users;
+        $rent->RentProduct($status); 
+    }
+
+    public function Disponibilize(){
+        $status = 1;
+        $disponibilize = new Users;
+        $disponibilize->DisponibilizeProduct($status); 
     }
 }

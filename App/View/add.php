@@ -47,6 +47,10 @@ $name = $_SESSION['name'];
                             <input placeholder="Valor" name="value" id="value" type="number" class="validate">
                             <label for="value">Valor por Dia alugado</label>
                         </div>
+                        <div class="input-field col s6">
+                            <input placeholder="Número para contato" name="phone" id="phone" type="number" class="validate">
+                            <label for="phone">Número para contato</label>
+                        </div>
                     </div>
                     <div class="">
                         <div class="input-field col s6">

@@ -32,15 +32,18 @@ Class SelectPainelConnect {
                     echo "<p>Nome: ".$value['name'] ."</p>";
                     echo "<img src='./assets/".$value['file']."'></img>";
                     echo "<p>Endereço: ".$value['address']."</p>";
+                    echo "<p>Contato: ".$value['phone']."</p>";
                     echo "<p>Valor por dia: ".$value['value']."$</p>";
                     //echo "<p>".$value['username'] ."</p>";
-                    if($value['status'] = 1){
+                    //$value['status'] = 2;
+                    if($value['status'] == 1){
                         echo "<p style='background-color:green; margin:3px;'>status: Disponível</p>";
-                        echo "<button class='btn waves-effect waves-light' name='rent'>Alugar</button>";
-
+                        echo "<button class='btn waves-effect waves-light' name='edit'>Editar Informações do Produto</button>";                        
                     } else {
-                        echo "<p style='background-color:yellow; margin:3px;>status: Alugado</p>";
-                        echo "<button class='btn waves-effect waves-light' name='provide'>Disponibilizar</button>";
+                        echo "<p style='background-color:yellow; margin:3px;'>status: Alugado</p>";
+                        echo "<button class='btn waves-effect waves-light' name='edit'>Editar Informações do Produto</button>";
+                        echo "<a href='?page=Validate&method=Disponibilize' style='color:white;'>
+                        <button class='btn waves-effect waves-light'>Disponibilizar</button></a>";
 
                     }
                     //echo "<p> ".$value['status'] ."</p>";

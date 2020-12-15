@@ -31,14 +31,15 @@ Class SelectClientConnect {
                     echo "<div class='container center-align products'>";
                     echo "<p>Nome: ".$value['name'] ."</p>";
                     echo "<img src='./assets/".$value['file']."'></img>";                    
-                    echo "<p>Endereço para retirada</p>";
-                    echo "<p>Contato: </p>";
-                    echo "<p>Valor por dia: </p>";
-
+                    echo "<p>Endereço para retirada".$value['address']."</p>";
+                    echo "<p>Valor por dia: ".$value['value']."$</p>";
+                    
                     echo "<p>Dono do produto: ".$value['username'] ."</p>";
+                    echo "<p>Contato: ".$value['phone']."</p>";
                     if($value['status'] = 1){
                         echo "<p style='background-color:green; margin:3px;'>status: Disponível</p>";
-                        echo "<button class='btn waves-effect waves-light' name='rent'>Alugar</button>";
+                        echo "<a href='?page=Validate&method=Rent' style='color:white;'>
+                        <button class='btn waves-effect waves-light'>Alugar</button></a>";
 
                     } else {
                         echo "<p style='background-color:yellow; margin:3px;>status: Alugado</p>";

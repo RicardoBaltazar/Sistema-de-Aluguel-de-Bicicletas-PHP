@@ -6,14 +6,15 @@ require_once 'Config.php';
 
 Class AddProductConnect {
     
-    public function AddProductDatabase($productName, $newFileName, $username, $address, $value, $status){
+    public function AddProductDatabase($productName, $newFileName, $username, $address, $phone, $value, $status){
         try{
-        $add = DatabaseConnect::connect()->prepare('INSERT INTO product(name, file, username, address, value, status) 
-        VALUES(:name, :file, :username, :address, :value, :status)');
+        $add = DatabaseConnect::connect()->prepare('INSERT INTO product(name, file, username, address, phone, value, status) 
+        VALUES(:name, :file, :username, :address, :phone, :value, :status)');
         $add->bindParam(":name", $productName);
         $add->bindParam(":file", $newFileName);
         $add->bindParam(":username", $username);
         $add->bindParam(":address", $address);
+        $add->bindParam(":phone", $phone);
         $add->bindParam(":value", $value);
         $add->bindParam(":status", $status);
 
@@ -24,7 +25,7 @@ Class AddProductConnect {
             if($executeAdd){
                 header('location:?page=add&parameter=Dados Cadastrados com sucesso! ');
             } else {
-                echo 'erro executar PDO Insert ';
+                echo 'erro ao inserir dados no banco de dados';
             }
         } catch (PDOException $error) {
             echo 'Erro com banco de dados '.$error ->getMessage();

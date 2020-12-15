@@ -4,6 +4,7 @@ require_once 'App/Model/Insert.php';
 require_once "App/Model/Select.php";
 require_once 'App/Model/Session.php';
 require_once 'App/Model/AddProduct.php';
+require_once 'App/Model/UpdateRent.php';
 //require_once 'Model/Config.php';
 
 class Users
@@ -13,6 +14,8 @@ class Users
     private $selectLogin;
     private $logoutUser;
     private $addProduct;
+    private $rentProduct;
+    private $disponibilizeProduct;
     private $username;
     private $status;
 
@@ -37,7 +40,7 @@ class Users
         header('location:?page=login');
     }
 
-    public function AddProduct($productName, $newFileName, $address, $value)
+    public function AddProduct($productName, $newFileName, $address, $phone, $value)
     {
         //echo 'usuario adicionando '.$name."<br>";
         //echo 'imagem adicionando '.$newFileName;
@@ -47,6 +50,18 @@ class Users
 
 
         $this->addProduct = new AddProductConnect;
-        $this->addProduct->AddProductDatabase($productName, $newFileName, $username, $address, $value, $status);
+        $this->addProduct->AddProductDatabase($productName, $newFileName, $username, $address, $phone, $value, $status);
+    }
+
+    public function RentProduct($status){
+        $username = $_SESSION['name'];
+        $this->rentProduct = new RentConnect;
+        $this->rentProduct->RentDatabase($username, $status);
+    }
+
+    public function DisponibilizeProduct($status){
+        $username = $_SESSION['name'];
+        $this->disponibilizeProduct = new RentConnect;
+        $this->disponibilizeProduct->DisponibilizeDatabase($username, $status);
     }
 }

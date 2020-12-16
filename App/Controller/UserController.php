@@ -5,11 +5,9 @@ require_once "App/Model/Select.php";
 require_once 'App/Model/Session.php';
 require_once 'App/Model/AddProduct.php';
 require_once 'App/Model/UpdateRent.php';
-//require_once 'Model/Config.php';
 
 class Users
 {
-
     private $insertSignup;
     private $selectLogin;
     private $logoutUser;
@@ -42,21 +40,20 @@ class Users
 
     public function AddProduct($productName, $newFileName, $address, $phone, $value)
     {
-        //echo 'usuario adicionando '.$name."<br>";
-        //echo 'imagem adicionando '.$newFileName;
-        //session_start();
+
         $username = $_SESSION['name'];
         $status = 1;
-
 
         $this->addProduct = new AddProductConnect;
         $this->addProduct->AddProductDatabase($productName, $newFileName, $username, $address, $phone, $value, $status);
     }
 
-    public function RentProduct($status){
+    public function RentProduct($id, $status){
         $username = $_SESSION['name'];
+        
+        
         $this->rentProduct = new RentConnect;
-        $this->rentProduct->RentDatabase($username, $status);
+        $this->rentProduct->RentDatabase($id, $username, $status);
     }
 
     public function DisponibilizeProduct($status){

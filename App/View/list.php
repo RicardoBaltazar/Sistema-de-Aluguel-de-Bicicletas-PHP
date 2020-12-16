@@ -1,6 +1,6 @@
 <?php
 
-require_once 'App/Model/SelectClient.php';
+require_once 'App/Model/SelectList.php';
 require_once 'App/Model/Session.php';
 $session = new Session;
 $session->validateSession();
@@ -32,7 +32,8 @@ $name = $_SESSION['name'];
             <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 
             <div class="container center-align">
-                <h1>Lista</h1>
+                <h4>Lista de Bicicletas</h4>
+                <p>Lista de bicicletas para alugar</p>
 
                 <?php
                     $list = new SelectClientConnect;

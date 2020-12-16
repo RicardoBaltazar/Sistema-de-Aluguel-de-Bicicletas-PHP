@@ -106,9 +106,15 @@ Class ValidateController{
     }
 
     public function Rent(){
-        $status = 2;
-        $rent = new Users;
-        $rent->RentProduct($status); 
+        if(isset($_POST['action'])){
+            $id = $_POST['id'];
+            
+            //echo $id;
+            
+            $status = 2;
+            $rent = new Users;
+            $rent->RentProduct($id, $status); 
+        }
     }
 
     public function Disponibilize(){

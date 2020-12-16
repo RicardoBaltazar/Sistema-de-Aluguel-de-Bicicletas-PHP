@@ -25,19 +25,19 @@ $name = $_SESSION['name'];
             <!--<h1><?php echo $name ?></h1>-->
 
             <ul id="slide-out" class="sidenav sidenav-fixed">
-                <li><a href="?page=painel">Meus Produtos</a></li>
+                <li><a href="?page=painel">Minhas Bicicletas</a></li>
                 <li><a href="#!" style="background-color:#696969;">Adicionar Produto</a></li>
             </ul>
             <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 
             <div style="margin-left: 30%;">
                 <form action="?page=Validate&method=AddProduct" method="POST" enctype="multipart/form-data">
-                    <h4>Adicione um produto</h4>
+                    <h4>Adicione uma bicicleta</h4>
                     <br>
                     <div class="">
                         <div class="input-field col s6">
                             <input placeholder="Nome" name="name" id="first_name" type="text" class="validate" required>
-                            <label for="first_name">Nome do produto</label>
+                            <label for="first_name">Nome da bicicleta</label>
                         </div>
                         <div class="input-field col s6">
                             <input placeholder="Endereço" name="address" id="address" type="text" class="validate">

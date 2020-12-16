@@ -23,27 +23,30 @@ $name = $_SESSION['name'];
     <main>
         <section>
             <ul id="slide-out" class="sidenav sidenav-fixed">
-                <li><a href="#!" style="background-color:#696969;">Meus Produtos</a></li>
-                <li><a href="?page=add">Adicionar Produto</a></li>
+                <li><a href="#!" style="background-color:#696969;">Minhas Bicicletas</a></li>
+                <li><a href="?page=add">Adicionar Bicicleta</a></li>
             </ul>
             <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
             
             
-                
+            <div class="container center-align">
+            <h4>Minhas Bicicletas</h4>
+            <p>Lista de Bicicletas cadastradas</p>
             <?php
 
 
             //print_r($products);
             //$allProducts = array();
-            
+
             $products = new SelectPainelConnect;
             $products->selectPainelDatabase();
 
-            
+                        
 
-            
+
             ?>
 
+            </div>
 
             
         </section>

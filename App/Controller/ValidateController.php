@@ -110,7 +110,7 @@ Class ValidateController{
             $id = $_POST['id'];
             
             //echo $id;
-            
+
             $status = 2;
             $rent = new Users;
             $rent->RentProduct($id, $status); 
@@ -118,8 +118,11 @@ Class ValidateController{
     }
 
     public function Disponibilize(){
+        if(isset($_POST['action'])){
+            $id = $_POST['id'];
         $status = 1;
         $disponibilize = new Users;
-        $disponibilize->DisponibilizeProduct($status); 
+        $disponibilize->DisponibilizeProduct($id, $status); 
+        }
     }
 }

@@ -37,7 +37,7 @@ Class SelectClientConnect {
                     echo "<img src='./assets/".$value['file']."'></img>";                    
                     echo "<p><label class='label'>Endereço para retirada: </label>".$value['address']."</p>";
                     echo "<p><label class='label'>Valor por dia: </label>".$value['value']."$</p>";
-                    echo "<p><label class='label'>Dono do produto: </label>".$value['username'] ."</p>";
+                    echo "<p><label class='label'>Dono da Bicicleta: </label>".$value['username'] ."</p>";
                     echo "<p><label class='label'>Contato: </label>".$value['phone']."</p>";
 
                     echo "<input type='hidden'  name='id' value='".$id."'>";

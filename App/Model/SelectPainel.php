@@ -16,21 +16,27 @@ Class SelectPainelConnect {
         $executeSelectPainel = $selectPainel->fetchAll(PDO::FETCH_ASSOC);
             if($executeSelectPainel){
                 foreach($executeSelectPainel as $value){
-                    echo "<div class='container center-align products'>";
-                    echo "<p>Nome: ".$value['name'] ."</p>";
-                    echo "<img src='./assets/".$value['file']."'></img>";
-                    echo "<p>Endereço: ".$value['address']."</p>";
-                    echo "<p>Contato: ".$value['phone']."</p>";
-                    echo "<p>Valor por dia: ".$value['value']."$</p>";
-                    if($value['status'] == 1){
-                        echo "<p style='background-color:green; margin:10px;'>status: Disponível</p>";
-                        echo "<button class='btn waves-effect waves-light' name='edit'>Editar Informações do Produto</button>";                        
-                    } else {
+                    $id = $value['id'];
+                    echo "<div class='container center-align '>";                    
+                    echo "<form action='?page=Validate&method=Disponibilize' method='POST' class='products'>";
+                    echo "<p><label class='label'>Nome: </label>".$value['name'] ."</p>";
+                    echo "<img src='./assets/".$value['file']."'></img>";                    
+                    echo "<p><label class='label'>Endereço para retirada: </label>".$value['address']."</p>";
+                    echo "<p><label class='label'>Valor por dia: </label>".$value['value']."$</p>";
+                    echo "<p><label class='label'>Dono da Bicicleta: </label>".$value['username'] ."</p>";
+                    echo "<p><label class='label'>Contato: </label>".$value['phone']."</p>";
+
+                    echo "<input type='hidden'  name='id' value='".$id."'>";
+                    //echo "<input type='hidden'  name='username' value='".$username."'>";
+                    if($value['status'] == 2){
                         echo "<p style='background-color:yellow; margin:10px;'>status: Alugado</p>";
-                        echo "<button class='btn waves-effect waves-light' name='edit'>Editar Informações do Produto</button>";
-                        echo "<a href='?page=Validate&method=Disponibilize' style='color:white;'>
-                        <button class='btn waves-effect waves-light'>Disponibilizar</button></a>";
+                        echo "<button class='btn waves-effect waves-light' type='submit' name='action' >Disponibilizar</button>";
+                    } else {
+                        echo "<p style='background-color:green; margin:10px;'>status: Disponível</p>";
+                        //echo "<button class='btn waves-effect waves-light' name='provide'>Disponibilizar</button>";
                     }
+                    echo "</form>";
+                    //echo "<p> ".$value['status'] ."</p>";
                     echo "</div>";
                 }
             }

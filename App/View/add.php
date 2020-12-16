@@ -13,6 +13,8 @@ $name = $_SESSION['name'];
             <div class="nav-wrapper">
                 <a href="#" class="brand-logo">Aluguel de Bicicletas</a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="?page=painel">Minhas Bicicletas</a></li>
+                    <li><a href="#!" style="background-color:#f9f9f9; color:#696969;">Adicionar Bicicleta</a></li>
                     <li><?php echo $name ?></li>
                     <li><a href="?page=Validate&method=logout">Sair</a></li>
                 </ul>
@@ -24,13 +26,15 @@ $name = $_SESSION['name'];
         <section>
             <!--<h1><?php echo $name ?></h1>-->
 
+            <!--
             <ul id="slide-out" class="sidenav sidenav-fixed">
                 <li><a href="?page=painel">Minhas Bicicletas</a></li>
                 <li><a href="#!" style="background-color:#696969;">Adicionar Produto</a></li>
             </ul>
             <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            -->
 
-            <div style="margin-left: 30%;">
+            <div>
                 <form action="?page=Validate&method=AddProduct" method="POST" enctype="multipart/form-data">
                     <h4>Adicione uma bicicleta</h4>
                     <br>

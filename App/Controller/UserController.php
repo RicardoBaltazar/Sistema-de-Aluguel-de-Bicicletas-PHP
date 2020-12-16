@@ -56,9 +56,10 @@ class Users
         $this->rentProduct->RentDatabase($id, $username, $status);
     }
 
-    public function DisponibilizeProduct($status){
-        $username = $_SESSION['name'];
+    public function DisponibilizeProduct($id, $status){
+        $username = '';
+
         $this->disponibilizeProduct = new RentConnect;
-        $this->disponibilizeProduct->DisponibilizeDatabase($username, $status);
+        $this->disponibilizeProduct->DisponibilizeDatabase($id, $username, $status);
     }
 }

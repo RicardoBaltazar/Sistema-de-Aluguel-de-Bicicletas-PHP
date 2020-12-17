@@ -1,5 +1,3 @@
-
-
 <div class="home-page">
     <header>
         <nav>
@@ -49,8 +47,7 @@
                     <?php
                     if (isset($_GET['parameter'])) {
                         echo $_GET['parameter'];
-                    }
-                    
+                    }              
                     ?>
                 </p>
             </div>

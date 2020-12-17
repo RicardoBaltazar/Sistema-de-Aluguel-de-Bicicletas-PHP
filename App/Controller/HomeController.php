@@ -1,8 +1,5 @@
 <?php
 
-
-require_once './App/Model/Config.php';
-
 Class HomeController
 {
     public function index(){

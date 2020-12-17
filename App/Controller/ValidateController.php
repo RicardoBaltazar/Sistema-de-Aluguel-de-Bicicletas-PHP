@@ -3,6 +3,7 @@
 
 require_once 'App/Controller/UserController.php';
 
+
 Class ValidateController{
 
     public function signup(){

@@ -1,9 +1,7 @@
 <?php
-
 require_once 'App/Model/Session.php';
 $session = new Session;
 $session->validateSession();
-
 $name = $_SESSION['name'];
 ?>
 
@@ -28,15 +26,6 @@ $name = $_SESSION['name'];
                 <li><a href="?page=painel">Minhas Bicicletas</a></li>
                 <li><a href="#!" style="background-color:#f9f9f9; color:#696969;">Adicionar Bicicleta</a></li>
             </div>
-            <!--<h1><?php echo $name ?></h1>-->
-
-            <!--
-            <ul id="slide-out" class="sidenav sidenav-fixed">
-                <li><a href="?page=painel">Minhas Bicicletas</a></li>
-                <li><a href="#!" style="background-color:#696969;">Adicionar Produto</a></li>
-            </ul>
-            <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-            -->
 
             <div>
                 <form action="?page=Validate&method=AddProduct" method="POST" enctype="multipart/form-data">
@@ -69,7 +58,6 @@ $name = $_SESSION['name'];
                             <button class="btn waves-effect waves-light" type="submit" name="action">Adicionar produto</button>
                         </div>
                     </div>
-
                 </form>
             </div>
         </section>

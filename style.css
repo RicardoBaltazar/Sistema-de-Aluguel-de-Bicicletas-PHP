@@ -18,6 +18,10 @@ nav ul li{
     margin-left: 25px;
 }
 
+.menu-mobile {
+    display: none;
+}
+
 .center-align{
     margin-top: 50px;
 }
@@ -66,25 +70,47 @@ form {
     margin-top: 64px;
 }
 
+@media(max-width: 320px){
+    .home-page header nav .brand-logo{
+        font-size: 14px;    
+    }
+}
+
 @media(max-width: 425px){
     .home-page header nav .brand-logo{
         font-size: 14px;
         left: 25%;
     }
 
-    .right{
-        display: block !important;
+    .home-page header nav .brand-logo{
+        font-size: 18px;
+        left: 50%;
+    }
+
+    .menu-mobile {
+        display: block;
+    }
+
+    .menu-mobile li {
+        margin-bottom: 5px;
+        font-size: 18px;
+        list-style: none;
+        border: 1px solid #696969;
+    }   
+
+    .mobile-none{
+        display: none;
     }
 
     form {
-        width: 100%;
+        width: 90%;
     }
 }
 
 @media(max-width: 768px){
     .home-page header nav .brand-logo{
-        font-size: 20px;
-        left: 25%;
+        font-size: 18px;
+        left: 20%;
     }
 
     .right{

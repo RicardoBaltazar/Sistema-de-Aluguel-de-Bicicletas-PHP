@@ -13,8 +13,8 @@ $name = $_SESSION['name'];
             <div class="nav-wrapper">
                 <a href="#" class="brand-logo">Aluguel de Bicicletas</a>
                 <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="?page=painel">Minhas Bicicletas</a></li>
-                    <li><a href="#!" style="background-color:#f9f9f9; color:#696969;">Adicionar Bicicleta</a></li>
+                    <li class="mobile-none"><a href="?page=painel">Minhas Bicicletas</a></li>
+                    <li class="mobile-none"><a href="#!" style="background-color:#f9f9f9; color:#696969;">Adicionar Bicicleta</a></li>
                     <li><?php echo $name ?></li>
                     <li><a href="?page=Validate&method=logout">Sair</a></li>
                 </ul>
@@ -24,6 +24,10 @@ $name = $_SESSION['name'];
 
     <main>
         <section>
+            <div class="menu-mobile container center-align">
+                <li><a href="?page=painel">Minhas Bicicletas</a></li>
+                <li><a href="#!" style="background-color:#f9f9f9; color:#696969;">Adicionar Bicicleta</a></li>
+            </div>
             <!--<h1><?php echo $name ?></h1>-->
 
             <!--
@@ -58,7 +62,7 @@ $name = $_SESSION['name'];
                     </div>
                     <div class="">
                         <div class="input-field col s6">
-                            <input name="file" id="file" type="file" class="validate" >
+                            <input name="file" id="file" type="file" class="validate">
 
                         </div>
                         <div class="center-align col s12">

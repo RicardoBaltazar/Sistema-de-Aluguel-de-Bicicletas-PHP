@@ -1,5 +1,30 @@
-# Sistema-de-Aluguel-de-Bicicletas-PHP
-Sistema de aluguel de bicicletas feito em PHP  
+# Sistema-de-Aluguel-de-Bicicletas
+Sistema de aluguel de bicicletas feito em PHP.  
+   
+### Sobre o Projeto  
+Meu objetivo com este projeto foi de aprender a desenvolver com a linguagem php e adicionar este projeto ao meu portifólio de projetos com a linguagem.  
+Neste projeto utilizei a extensão [PDO](https://www.php.net/manual/pt_BR/intro.pdo.php) para acessar o banco de dados. Utitizei o conceito de Orientação a objetos e também usei a arquitetura de código MVC para deixar o código mais organizado.  
+Utitilei o banco de dados relacional Mysql e o software phpMyAdmin para administração dos  dados.  
+No frontend utilizer html, css e o framework CSS materialize que é baseado baseada em Material Design. O projeto tem design responsivo se adaptando a tamanhos diferentes de tela.
+
+### Técnologias utilizadas  
+  
+[Html](https://developer.mozilla.org/pt-BR/docs/Web/HTML)  
+[Css](https://developer.mozilla.org/pt-BR/docs/Web/CSS)  
+[Materialize](https://materializecss.com/)  
+[PHP](https://www.php.net/)  
+[Mysql](https://www.mysql.com/)  
+  
+### Como o projeto funciona  
+Este projeto é um sistema de aluguel de Bicicletas.  
+- O usuário pode se cadastrar como cliente ou como fornecedor.  
+- O usuário pode realizar login como cliente ou como fornecedor. Após o login o cliente e o fornecedor são direcionados para páginas diferentes, cada uma relacionada para o tipo de usuário.  
+- Exixtem mensagens de erro na tela caso o usuário informa dados errados ao fazer login.  
+- O cliente pode acessar a lista de bicicletas disponíveis para alugar e também pode acessar a sua própria lista de bicicletas alugadas.  
+- O fornecedor pode adicionar bicicletas na lista para outros cliente alugarem e também pode acessar a sua lista de bicicletas adicionadas.  
+- O cliente pode alugar uma bicicleta e adicionar ela a sua lista de bicicletas alugadas.  
+- O fornecedor pode disponibilizar uma bicicleta bicicleta que foi alugada por um cliente deixando ela disponível para outros clientes.  
+- Os usuários podem realizar logout do sistema e retornar para a página de cadastro e login.
   
 ## screenshots  
   
@@ -17,6 +42,10 @@ Sistema de aluguel de bicicletas feito em PHP
 ## Gifs  
   
 <img src="https://user-images.githubusercontent.com/56805229/102552004-32220480-409f-11eb-8b85-81ca5a61decb.gif" alt="gif1" heigth="500"/>  
-<img src="https://user-images.githubusercontent.com/56805229/102552062-4a921f00-409f-11eb-85e2-faff194b4f5d.gif" alt="igif2" width="500"/> 
+<img src="https://user-images.githubusercontent.com/56805229/102552062-4a921f00-409f-11eb-85e2-faff194b4f5d.gif" alt="igif2" width="500"/>   
+  
+## Licença  
+  
+Este projeto tem licença [MIT](https://github.com/RicardoBaltazar/Sistema-de-Aluguel-de-Bicicletas-PHP/blob/master/LICENSE)
 
 

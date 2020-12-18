@@ -36,10 +36,12 @@ Este projeto é um sistema de aluguel de Bicicletas.
 - Abra o phpMyAdmin e crie um banco de dados com o nome de bicycle_rental_system  
 - Crie duas tabelas nesse banco de dados. uma tabela chamada users e outra tabela chamada product.  
   
-Cria a estrutura da tabela users como na imagem abaixo  
+- Cria a estrutura da tabela users como na imagem abaixo   
+  
 ![estrutura-tabela-users](https://user-images.githubusercontent.com/56805229/102641251-85956080-413a-11eb-85f7-4e20f4d2e69e.png)  
   
 - Cria a estrutura da tabela product como na imagem abaixo.  
+  
 ![estrutura-tabela-product](https://user-images.githubusercontent.com/56805229/102641289-9940c700-413a-11eb-91b6-585ca0ff79e9.png)  
 
 

@@ -19,7 +19,7 @@ No frontend utilizer html, css e o framework CSS materialize que é baseado base
 Este projeto é um sistema de aluguel de Bicicletas.  
 - O usuário pode se cadastrar como cliente ou como fornecedor.  
 - O usuário pode realizar login como cliente ou como fornecedor. Após o login o cliente e o fornecedor são direcionados para páginas diferentes, cada uma relacionada para o tipo de usuário.  
-- Exixtem mensagens de erro na tela caso o usuário informa dados errados ao fazer login.  
+- Existem mensagens de erro na tela caso o usuário informar dados errados ao fazer login.  
 - O cliente pode acessar a lista de bicicletas disponíveis para alugar e também pode acessar a sua própria lista de bicicletas alugadas.  
 - O fornecedor pode adicionar bicicletas na lista para outros cliente alugarem e também pode acessar a sua lista de bicicletas adicionadas.  
 - O cliente pode alugar uma bicicleta e adicionar ela a sua lista de bicicletas alugadas.  

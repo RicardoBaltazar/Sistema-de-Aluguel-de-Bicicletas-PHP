@@ -26,6 +26,26 @@ Este projeto é um sistema de aluguel de Bicicletas.
 - O fornecedor pode disponibilizar uma bicicleta bicicleta que foi alugada por um cliente deixando ela disponível para outros clientes.  
 - Os usuários podem realizar logout do sistema e retornar para a página de cadastro e login.
   
+### Intalação  
+- Para rodar o projeto você deve ter o [XAMP](https://www.apachefriends.org/pt_br/index.html) instalado e algum editor de código.  
+- Após instalar o XAMP, abra o painel de controle do XAMP e inicie o APACHE e o MYSQL no botão start.  
+- Acesse a pasta com o caminho  
+> cd C: \ xampp \ htdocs \  
+- abra o terminal e digite o comando  
+> git clone https://github.com/RicardoBaltazar/Sistema-de-Aluguel-de-Bicicletas-PHP.git  para clonar o projeto na sua pasta htdocs.  
+- Abra o phpMyAdmin e crie um banco de dados com o nome de bicycle_rental_system  
+- Crie duas tabelas nesse banco de dados. uma tabela chamada users e outra tabela chamada product.  
+  
+Cria a estrutura da tabela users como na imagem abaixo  
+![estrutura-tabela-users](https://user-images.githubusercontent.com/56805229/102641251-85956080-413a-11eb-85f7-4e20f4d2e69e.png)  
+  
+- Cria a estrutura da tabela product como na imagem abaixo.  
+![estrutura-tabela-product](https://user-images.githubusercontent.com/56805229/102641289-9940c700-413a-11eb-91b6-585ca0ff79e9.png)  
+
+
+
+
+  
 ## screenshots  
   
 ![imagem1](https://user-images.githubusercontent.com/56805229/102552625-47e3f980-40a0-11eb-8366-ad985b54bdd8.png)  

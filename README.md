@@ -3,9 +3,9 @@ Sistema de aluguel de bicicletas feito em PHP.
    
 ### Sobre o Projeto  
 Meu objetivo com este projeto foi de aprender a desenvolver com a linguagem php e adicionar este projeto ao meu portifólio de projetos com a linguagem.  
-Neste projeto utilizei a extensão [PDO](https://www.php.net/manual/pt_BR/intro.pdo.php) para acessar o banco de dados. Utitizei o conceito de Orientação a objetos e também usei a arquitetura de código MVC para deixar o código mais organizado.  
-Utitilei o banco de dados relacional Mysql e o software phpMyAdmin para administração dos  dados.  
-No frontend utilizer html, css e o framework CSS materialize que é baseado baseada em Material Design. O projeto tem design responsivo se adaptando a tamanhos diferentes de tela.
+Neste projeto utilizei a extensão [PDO](https://www.php.net/manual/pt_BR/intro.pdo.php) para acessar o banco de dados. Utilizei o conceito de Orientação a objetos e também usei a arquitetura de código MVC para deixar o código mais organizado.  
+Utitilei o banco de dados relacional Mysql e o software phpMyAdmin para administração dos dados.  
+No frontend utilizer html, css e o framework CSS materialize que é baseado em Material Design. O projeto tem design responsivo se adaptando a tamanhos diferentes de tela.
 
 ### Técnologias utilizadas  
   
